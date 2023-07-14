@@ -70,21 +70,52 @@
     }
   </style>
 </head>
-<button><a href=page2.html font color="white">Hi</font></a></button>
+
 <body>
  <h1> </h1>
   <div class="background-image"></div>
-  <div class="container">
-    <div id="content-container">
-      <div class="content">
-        <p>comic shans ms</p>
 
-      </div>
-    </div>
+  </div>
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Button</title>
+</head>
+<body>
+  <div id="button-container">
+    <button onclick="createButton()">Create Button</button>
   </div>
 
+  <script>
+    var counter = 0;
+
+    function createButton() {
+      var container = document.getElementById("button-container");
+      
+      if (counter < 4) {
+        var button = document.createElement("button");
+        var buttonText = document.createTextNode("Button " + (counter + 1));
+        
+        button.appendChild(buttonText);
+        button.onclick = createButton; // Assign onclick event for new buttons
+        container.appendChild(button);
+        counter++;
+      }
+      else if (counter === 4) {
+        container.removeChild(container.firstChild); // Remove the initial button
+        var link = document.createElement("a");
+        link.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUHcmljcm9sbA%3D%3D"; // Replace with your desired link
+        link.textContent = "Final Button";
+        container.appendChild(link);
+        counter++;
+      }
+    }
+  </script>
+</body>
+</html>
 
 </body>
-
-
 </html>
+
