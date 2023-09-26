@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+<!-- saved from url=(0033)https://shee-ess-ess.netlify.app/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Shee-Ess-Ess</title>
   <style>
     p {
@@ -12,9 +12,10 @@
       color: white;
       margin: 0;
       padding: 0;
-	  font-size: 90px;
-	  padding: 20px;
-	  font-variant: small-caps;
+      font-size: 90px;
+      padding: 20px;
+      font-family: "Comic Sans MS";
+
 
     }
 		@keyframes example {
@@ -35,8 +36,8 @@
 	  animation-duration: 4s;
 	  animation-iteration-count: infinite;
 	  overflow-x: hidden;
-	  border-width: 9px;
-	  border-style: groove;
+	  line-height: 3px;
+
 	}
     
     .container {
@@ -71,23 +72,28 @@
   </style>
 </head>
 
-<body>
- <h1> </h1>
   <div class="background-image"></div>
+<body><font size=4>
+<H1> How to Make  infinitely scrolling nightmare  </h1>
+In this tutorial, I will show you how to create an infinitely scrolling nightmare effect using HTML and CSS. This effect is achieved by continuously animating a background image and creating an infinite loop.
 
-  </div>
-<!DOCTYPE html>
-<html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Create Button</title>
-</head>
-<body>
-  <div id="button-container">
-    <button onclick="createButton()">Create Button</button>
-  </div>
+First, let's start with the HTML structure. We will have a `<div>` element with a class of "background-image" to hold our scrolling background. Inside the `<body>` tag, create a `<div>` element with a class of "background-image" and add the necessary CSS styles to position it and set its background image. 
 
+Next, we need to create the CSS animations for the scrolling background. In the CSS section, define the `scrollBackground` animation using the `@keyframes` rule. This animation will gradually change the background position of the element from 0% to 100% over a specified duration. Set the `background-position` of the element to 0 at the start and -100vh at the end to create a continuous scrolling effect. Add the animation to the `.background-image` class by setting the `animation` property to `scrollBackground`, the duration to 20s, and the iteration count to infinite.
+
+Now that we have our scrolling background, let's add some text to the page. Add an `<h1>` heading with the title "How to Make an Infinitely Scrolling Nightmare" inside the `<body>` tag. You can style the text using CSS to give it a larger font size and choose a font family.
+
+Moving on to JavaScript, we will create a button that generates more buttons. Declare a variable `counter` and set it to 0. In the `createButton` function, get the button container element using `document.getElementById` and check if the `counter` is less than 4. If so, create a new button element using `document.createElement` and append it to the container. Set the button's text using `document.createTextNode`, and add an onclick event to the button that calls the `createButton` function again. Increase the `counter` by 1.
+
+When the `counter` reaches 4, remove the initial button using `container.removeChild` and create a link element using `document.createElement`. Set the href attribute of the link to your desired link, and set its text content to "Final Button". Append the link to the container.
+
+Finally, call the `createButton` function initially to generate the first button. Each time the button is clicked, it will generate more buttons until the `counter` reaches 4.
+
+And that's it! You have now created an infinitely scrolling nightmare effect using HTML, CSS, and JavaScript. Feel free to customize the animation, text, and button styles to suit your preferences.
+
+
+</font>
+</body>
   <script>
     var counter = 0;
 
@@ -113,9 +119,10 @@
       }
     }
   </script>
-</body>
-</html>
 
-</body>
-</html>
 
+
+
+
+
+</body></html>
